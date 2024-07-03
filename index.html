@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aesthetic Background Video Page</title>
     <style>
+        /* Importing Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+        /* General body and HTML styles */
         body, html {
             margin: 0;
             padding: 0;
@@ -17,6 +19,7 @@
             font-family: 'Roboto', Arial, sans-serif;
         }
 
+        /* Video background styling */
         .video-bg {
             position: absolute;
             top: 0;
@@ -28,6 +31,7 @@
             filter: brightness(60%);
         }
 
+        /* Content container styling */
         .content {
             position: absolute;
             top: 50%;
@@ -37,11 +41,12 @@
             text-align: center;
             padding: 20px;
             max-width: 80%;
-            background: rgba(0, 0, 0, 0.2); /* Adjusted transparency */
+            background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
+        /* Heading styling */
         .content h1 {
             font-size: 3.5em;
             margin: 0 0 20px 0;
@@ -49,6 +54,7 @@
             font-family: 'Dancing Script', cursive;
         }
 
+        /* Paragraph styling */
         .content p {
             font-size: 1em;
             margin: 20px 0;
@@ -56,23 +62,25 @@
             line-height: 1.6;
         }
 
+        /* Button styling */
         .button {
             display: inline-block;
             padding: 15px 30px;
-            margin-top: 60px; /* Increased margin-top to push the button further down */
+            margin-top: 60px; /* Increased margin-top */
             font-size: 1.2em;
             color: white;
-            background: rgba(0, 0, 0, 0.8); /* Darker background */
-            border: none; /* Removed border */
+            background: rgba(0, 0, 0, 0.8); /* Dark background */
+            border: none;
             border-radius: 25px;
             text-decoration: none;
-            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-            font-family: 'Roboto', Arial, sans-serif; /* Changed font */
-            cursor: pointer; /* Added cursor style */
-            position: relative; /* Added relative positioning for pseudo elements */
-            overflow: hidden; /* Ensures pseudo elements are hidden */
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-family: 'Roboto', Arial, sans-serif;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
+        /* Pseudo-elements for button hover effect */
         .button::before,
         .button::after {
             content: '';
@@ -84,7 +92,7 @@
             left: 0;
             z-index: 1;
             transition: transform 0.4s ease;
-            pointer-events: none; /* Ensures pseudo elements do not intercept clicks */
+            pointer-events: none;
         }
 
         .button::after {
@@ -108,6 +116,7 @@
             transform: scale(0.95); /* Scale down when clicked */
         }
 
+        /* Styling for date and time containers */
         .date-container {
             position: absolute;
             top: 20px;
@@ -131,19 +140,23 @@
     </style>
 </head>
 <body>
+    <!-- Video background element -->
     <video class="video-bg" autoplay loop muted>
         <source src="Video2.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
+    <!-- Date container -->
     <div class="date-container">
         <div id="month">Month</div>
         <div id="day">Day</div>
         <div id="year">Year</div>
     </div>
 
+    <!-- Time container -->
     <div class="time-container" id="time">Time</div>
 
+    <!-- Content section with heading, paragraphs, and styled button -->
     <div class="content">
         <h1>Come Laugh With Me Girl</h1>
         <p>Your words bring laughter and smile to my face, filling me with relaxation and joy. My laughter is a reflection of love, a gentle breeze that calms my soul amidst the chaos of everyday life.</p>
@@ -151,6 +164,7 @@
         <a href="explore.html" onclick="window.open('explore.html', '_self');" class="button">Let's Explore Together</a>
     </div>
 
+    <!-- JavaScript to display current date and time -->
     <script>
         // Replace these with the actual date and time values
         const month = "July";
@@ -158,6 +172,7 @@
         const year = "2024";
         const time = "10:30 AM";
 
+        // Set date and time in respective containers
         document.getElementById('month').textContent = month;
         document.getElementById('day').textContent = day;
         document.getElementById('year').textContent = year;
